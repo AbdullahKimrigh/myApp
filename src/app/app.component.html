@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MyApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <div>
+    <p>Enter your name please:</p>
+    <p>First Name : <input type="text" ng-model="firstName" placeholder="Enter first name here"></p>
+    <p>Last Name : <input type="text" ng-model="lastName" placeholder="Enter last anem here"></p>
+    <p>your birthay year : <input type="text" ng-model="Uyear" placeholder="Enter birthday year here"></p>
+
+    <br>
+
+    <h3>Full Name: </h3>
+
+    <h3>your age: <span ng-bind="year - Uyear"></span></h3>
+
+    <h3>my exiting URL is: </h3>
+  </div>
+
+  <form ng-app="" name="myForm">
+    Email:
+    <input type="email" name="email" ng-model="email" required>
+    <span ng-show="myForm.email.$Invalid.required">Email is required.</span>
+    <span ng-show="myForm.email.$Invalid.email">Invalid email address.</span>
+  </form>
+</body>
+
+</html>
